@@ -1,0 +1,186 @@
+body{
+    background: linear-gradient(to left,skyblue, white); /* màu nền */
+    background-attachment: fixed; /* cố định nền */;
+    background-size: cover; /* kích thước nền */
+    background-position: center; /* vị trí nền */;
+}
+/* Selector theo thẻ */
+p{
+    color: red;
+    font-size: 20px;
+}
+/* Selector theo Class */
+.le{
+    background-color: yellow;
+}
+.chan{
+    background-color: green;
+}
+/* Selector theo id  */
+#p3{
+    color: blue;
+}
+/* font  */
+p.le {
+    font-family: sans-serif; /* font chữ */
+    font-size: 20px; /* kích thước chữ */
+    font-weight: bold; /* in đậm */
+    font-style: italic; /* in nghiêng */
+    text-decoration: dotted underline ; /* gạch chân */
+    text-transform: uppercase; /* chữ hoa */
+    text-align: center; /* căn giữa */
+    line-height: 1.5; /* khoảng cách giữa các dòng */
+    letter-spacing: 2px; /* khoảng cách giữa các chữ cái */
+    text-indent: 50px; /* lề đầu dòng */
+
+}
+p.chan{
+    border-style: solid; /* kiểu viền */
+    border-width: 2px; /* độ dày viền */
+    border-color: red; /* màu viền */
+    border-radius: 10px; /* bo tròn viền */
+    padding: 10px; /* khoảng cách giữa nội dung và viền */
+    margin: 10px; /* khoảng cách giữa các phần tử */
+}
+/* margin va padding */
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+
+
+}
+#box2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+} 
+/* posison */
+/* Lí thuyết
+ static: là cái mặc định ban đầu
+
+ relative: đi kèm theo các thuộc tính như top, left, :right, botton
+ nó hoạt động=> nó có thể di chuyển tự do nhưng phụ thuộc vào phần ban đầu của nó 
+ trong trường hợp này là thẻ <p> phí trước nó kiểu như nó tạo ra một vị trí
+ ảo phụ thuộc vào phần tử trước nó và nó sẽ di chuyển tự do trong trang web dựa
+ vào các thuộc tính top,left... mà không đẩy vị trí các nội dung khác 
+ 
+ absolute: nó sẽ phụ thuộc theo phần tử cha của nó ở đây là thẻ body
+ nếu phần tủ cha nó là raltive thì nó sẽ theo còn không nó sẽ phụ thuộc vào thẻ body
+ hay thẻ cha reative gần nhất*/
+#box3{
+   border: 1px solid black;
+   background-color: red;
+   width: 400px;
+   height: 400px;
+   position: relative;
+}
+#box4{
+    border: 1px solid black;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+   
+}
+/* fixed: nó sẽ giữ nguyên vị trí của nó khi cuộn trang web */
+#box5{
+    border: 1px solid black;
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top:60%;
+    right: 30px;
+ }
+  /* sticky: nó sẽ giữ nguyên vị trí của nó khi cuộn trang web nếu chưa chạm lề
+  thì nó vẫn ở vị trí cũ*/
+ #box6{
+     border: 1px solid black;
+     background-color:orange;
+     width: 200px;
+     height: 200px;
+     position: sticky;
+     top: 50px;
+ }
+ /* Shadow */
+ .shadow{
+    text-shadow: 5px 5px 5px red; /* đổ bóng chữ */
+    /* số đầu tiên: đổ bóng theo chiều ngang
+    số thứ hai: đổ bóng theo chiều dọc
+    số thứ ba: độ mờ của bóng
+    số thứ tư: màu bóng */
+    box-shadow: 10px 10px 5px 1cqb rgba(0,0,0,0.75);
+    /* số đầu tiên: đổ bóng theo chiều ngang
+    số thứ hai: đổ bóng theo chiều dọc
+    số thứ ba: độ mờ của bóng
+    số thứ tư: độ rộng của bóng
+    rgba: màu bóng */
+ }
+    /* Transition */
+    /* Lí thuyết dùng để 
+    transition: thuộc tính thời gian hiệu ứng
+    transition-property: thuộc tính muốn thay đổi
+    
+    transition-duration: thời gian thay đổi
+    transition-timing-function: kiểu hiệu ứng
+    transition-delay: thời gian trễ trước khi thực hiện hiệu ứng */
+  /* transform */
+    /* Lí thuyết dùng để thay dổi hình dáng xoay di chuyển phần tử
+    transform: biến đổi phần tử
+    transform: scale(1.5); phóng to phần tử
+    transform: rotate(45deg); xoay phần tử
+    transform: skew(30deg); nghiêng phần tử
+    transform: translate(50px, 50px); di chuyển phần tử */
+.css-transform{
+    border:solid 1px black;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform: translate(50px, 50px);
+}
+    /* Animation */
+    /* Lí thuyết
+    animation: tên hiệu ứng thời gian thực hiện
+    animation-name: tên hiệu ứng
+    animation-duration: thời gian thực hiện
+    animation-timing-function: kiểu hiệu ứng
+    animation-delay: thời gian trễ trước khi thực hiện hiệu ứng
+    animation-iteration-count: số lần lặp
+    animation-direction: hướng lặp
+    animation-fill-mode: kiểu lặp */
+
+/* pseudo class */
+/* Lí thuyết
+pseudo class là một lớp ảo nó sẽ thay đổi trạng thái của phần tử
+khi người dùng tương tác với phần tử đó
+pseudo class có thể kết hợp với các selector khác như class, id, tag
+*/
+button:hover{
+    background-color: red;
+}
+button:active{
+    background-color: blue;
+}
+/* :nth-child() */
+li:nth-child(odd){
+    background-color: red;
+}
+/* hover */
+/* reponsive */
+@media all and (max-width: 600px){
+    h1{
+        background-color: yellow;
+    }
+    p{
+        color: black;
+    }
+}
